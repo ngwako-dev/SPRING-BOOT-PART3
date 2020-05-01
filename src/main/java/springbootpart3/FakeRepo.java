@@ -1,6 +1,7 @@
 package springbootpart3;
 
 
+import model.User;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

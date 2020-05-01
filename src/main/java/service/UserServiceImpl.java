@@ -1,8 +1,10 @@
-package springbootpart3;
+package service;
 
 import org.springframework.cache.annotation.Cacheable;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import springbootpart3.FakeRepo;
+import springbootpart3.UserService;
+
 @Service
 public  class UserServiceImpl implements UserService {
 

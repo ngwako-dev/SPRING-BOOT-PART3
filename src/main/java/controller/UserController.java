@@ -1,13 +1,10 @@
 package controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import springbootpart3.User;
+import model.User;
 import springbootpart3.UserService;
 
-import javax.lang.model.element.Name;
 
 @RestController
 @RequestMapping("api")
@@ -23,14 +20,14 @@ public class UserController {
     }
 
 
-    @GetMapping("/getUser")
+    @GetMapping("/getUser/{ID}")
     public String getUser(@PathVariable long ID){
-        return userService.getUser(ID);
+        return userService.getUser(1);
     }
 
-    @DeleteMapping("/delete")
+    @DeleteMapping("/deleteUser/{ID}")
     public String removeUser(@PathVariable long ID){
-        return userService.removeUser(ID);
+        return userService.removeUser(1);
     }
 
 

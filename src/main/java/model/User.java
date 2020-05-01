@@ -1,4 +1,4 @@
-package springbootpart3;
+package model;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;
