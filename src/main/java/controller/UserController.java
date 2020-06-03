@@ -8,7 +8,6 @@ import springbootpart3.UserService;
 
 @RestController
 @RequestMapping("api")
-
 public class UserController {
 
 
@@ -19,6 +18,10 @@ public class UserController {
         this.userService = userService;
     }
 
+    @PostMapping("/addUser")
+    public String addUser(@RequestBody User user) {
+        return userService.addUser(user.getId(),user.getName(),user.getSurname());
+    }
 
     @GetMapping("/getUser/{ID}")
     public String getUser(@PathVariable long ID){
@@ -29,12 +32,5 @@ public class UserController {
     public String removeUser(@PathVariable long ID){
         return userService.removeUser(1);
     }
-
-
-    @PostMapping("/addUser")
-    public String addUser(@RequestBody User user) {
-        return userService.addUser(user.getId(),user.getName(),user.getSurname());
-    }
-
 
 }
